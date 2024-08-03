@@ -46,7 +46,10 @@ void nodeTimeAdjustedCallback(int32_t offset) {
 
 void setup() {
   Serial.begin(115200);
-
+  
+  //set wifi power
+  WiFi.setTxPower(WIFI_POWER_19_5dBm);
+  
 //mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | SYNC | COMMUNICATION | GENERAL | MSG_TYPES | REMOTE ); // all types on
   mesh.setDebugMsgTypes( ERROR | STARTUP );  // set before init() so that you can see startup messages
 
